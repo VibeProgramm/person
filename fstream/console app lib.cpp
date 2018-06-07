@@ -47,11 +47,13 @@ int main()
 				break;
 			case 2:
 				msg = "";
+				cout << "Чтение данных из файла" << endl;
 				while (!fs.eof())
 				{
 					fs >> msg;
 					cout << msg << endl;
-				
+					
+
 				}
 				break;
 			default: cout << "Не верно введено значение";
@@ -59,6 +61,8 @@ int main()
 
 			}
 			cout << endl; menu();
+			fs.clear();
+			fs.seekg(0);
 		}
 
 	}
