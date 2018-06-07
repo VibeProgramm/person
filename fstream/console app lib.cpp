@@ -17,7 +17,6 @@ int main()
 
 
 	fstream fs("text.txt", fstream::in | fstream::out | fstream::app);
-	fstream os("text.txt", fstream::in | fstream::out | fstream::app);
 	
 	if (!fs.is_open())
 	
@@ -46,17 +45,15 @@ int main()
 				cin.ignore();
 				getline(cin, msg);
 				fs << msg << endl;
-				fs.close();
 				break;
 			case 2:
 				output = "";
-				while (!os.eof())
+				while (!fs.eof())
 				{
-					os >> output;
+					fs >> output;
 					cout << output << endl;
 				
 				}
-				//os.close();
 				break;
 			default: cout << "Не верно введено значение";
 				return -1; break;
