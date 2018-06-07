@@ -29,7 +29,6 @@ int main()
 		
 		
 		string msg;
-		string output;
 
 		menu();
 
@@ -47,11 +46,11 @@ int main()
 				fs << msg << endl;
 				break;
 			case 2:
-				output = "";
+				msg = "";
 				while (!fs.eof())
 				{
-					fs >> output;
-					cout << output << endl;
+					fs >> msg;
+					cout << msg << endl;
 				
 				}
 				break;
