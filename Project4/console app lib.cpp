@@ -3,6 +3,7 @@
 
 #include <std_lib_facilities.h>
 #include "person.h"
+#include "data.h"
 
 
 int main()
