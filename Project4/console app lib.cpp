@@ -10,9 +10,14 @@ int main()
 {
 	SetConsoleRU();
 
-
-
-
+	fstream fs;
+	fs.open("text.txt");
+	if (fs.is_open())
+	{
+		cout << "Yes" << endl;
+	}
+	else cout << "No" << endl;
+	
 	system("pause");
 	return 0;
 }
